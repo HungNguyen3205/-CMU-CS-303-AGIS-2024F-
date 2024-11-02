@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package java1;
+package Scanner_30_10_24;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,37 +16,37 @@ import java.util.Scanner;
 public class Bai_tap_31_10_2024 {
     
     //Bai 1
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Input name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Input age: ");
-        int age = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("Input sex: ");
-        String sex = sc.nextLine();
-
-        System.out.print("Input major: ");
-        String major = sc.nextLine();
-
-        System.out.print("Input GPA: ");
-        float gpa = sc.nextFloat();
-        sc.nextLine();
-
-        System.out.print("Input hometown: ");
-        String hometown = sc.nextLine();
-
-        System.out.println("");
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Sex: " + sex);
-        System.out.println("Major: " + major);
-        System.out.println("GPA: " + gpa);
-        System.out.println("Hometown: " + hometown);
-    }
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Input name: ");
+//        String name = sc.nextLine();
+//
+//        System.out.print("Input age: ");
+//        int age = sc.nextInt();
+//        sc.nextLine();
+//
+//        System.out.print("Input sex: ");
+//        String sex = sc.nextLine();
+//
+//        System.out.print("Input major: ");
+//        String major = sc.nextLine();
+//
+//        System.out.print("Input GPA: ");
+//        float gpa = sc.nextFloat();
+//        sc.nextLine();
+//
+//        System.out.print("Input hometown: ");
+//        String hometown = sc.nextLine();
+//
+//        System.out.println("");
+//        System.out.println("Name: " + name);
+//        System.out.println("Age: " + age);
+//        System.out.println("Sex: " + sex);
+//        System.out.println("Major: " + major);
+//        System.out.println("GPA: " + gpa);
+//        System.out.println("Hometown: " + hometown);
+//    }
     
     
     //Bai 1.1
@@ -91,11 +91,11 @@ public class Bai_tap_31_10_2024 {
 //    }
 
     //Bai2
-//    public static void main(String[] args) {
-//        Scanner sc  = new Scanner(System.in);
-//        System.out.println("Enter the string of numbers here that you want to check is correct or not");
-//        System.out.println("String data type? "+ sc.hasNext());
-//    }
+    public static void main(String[] args) {
+        Scanner sc  = new Scanner(System.in);
+        System.out.println("Enter the string of numbers here that you want to check is correct or not");
+        System.out.println("String data type? "+ sc.hasNext());
+    }
     //Bai3
 //    public static void main(String[] args) {
 //        Scanner sc  = new Scanner(System.in);
