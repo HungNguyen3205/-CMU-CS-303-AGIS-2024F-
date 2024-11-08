@@ -1,4 +1,4 @@
-package Assignment3;
+package Assignment3.IFELSESWITCHCASE;
 
 import java.util.Scanner;
 

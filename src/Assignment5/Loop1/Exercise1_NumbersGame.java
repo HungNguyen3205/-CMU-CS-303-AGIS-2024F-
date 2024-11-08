@@ -1,9 +1,9 @@
-package Assignment5;
+package Assignment5.Loop1;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Exercise1_NumbersGame {
 
     public static void program() {
         Scanner sc = new Scanner(System.in);
@@ -25,6 +25,6 @@ public class Exercise1 {
     }
 
     public static void main(String[] args) {
-        Exercise1.program();
+        Exercise1_NumbersGame.program();
     }
 }

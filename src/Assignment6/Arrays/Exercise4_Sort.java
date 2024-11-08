@@ -1,9 +1,9 @@
-package Assignment6;
+package Assignment6.Arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercise4 {
+public class Exercise4_Sort {
     public static void SortExample() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of elements in the array: ");
@@ -17,6 +17,6 @@ public class Exercise4 {
         System.out.println(Arrays.toString(arr));
     }
     public static void main(String[] args) {
-        Exercise4.SortExample();
+        Exercise4_Sort.SortExample();
     }
 }

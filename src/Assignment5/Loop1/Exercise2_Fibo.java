@@ -1,8 +1,8 @@
-package Assignment5;
+package Assignment5.Loop1;
 
 import java.util.Scanner;
 
-public class Exercise2 {
+public class Exercise2_Fibo {
     public static void Fibo(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of Fibonacci elements you want to print: ");
@@ -21,6 +21,6 @@ public class Exercise2 {
         }
     }
     public static void main(String[] args) {
-        Exercise2.Fibo();
+        Exercise2_Fibo.Fibo();
     }
 }

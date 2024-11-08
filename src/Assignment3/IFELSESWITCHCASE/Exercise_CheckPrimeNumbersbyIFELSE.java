@@ -1,8 +1,8 @@
-package Assignment3;
+package Assignment3.IFELSESWITCHCASE;
 
 import java.util.Scanner;
 
-public class Exercise3 {
+public class Exercise_CheckPrimeNumbersbyIFELSE {
     public static void Check(){
         System.out.println("Input the number: ");
         Scanner sc = new Scanner(System.in);
@@ -22,6 +22,6 @@ public class Exercise3 {
     }
     
     public static void main(String[] args) {
-        Exercise3.Check();
+        Exercise_CheckPrimeNumbersbyIFELSE.Check();
     }
 }

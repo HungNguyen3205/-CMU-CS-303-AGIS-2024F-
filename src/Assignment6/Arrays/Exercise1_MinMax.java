@@ -1,9 +1,9 @@
-package Assignment6;
+package Assignment6.Arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Exercise1_MinMax {
     public static void minMax(int[] arr){
         int max = arr[0];
         int min = arr[0];
@@ -32,6 +32,6 @@ public class Exercise1 {
         minMax(arr);
     }
     public static void main(String[] args) {
-        Exercise1.Print();
+        Exercise1_MinMax.Print();
     }
 }

@@ -1,9 +1,9 @@
-package Assignment6;
+package Assignment6.Arrays;
 
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Exercise2 {
+public class Exercise2_SumAverage {
     public static void CALCULATE(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
@@ -30,6 +30,6 @@ public class Exercise2 {
         System.out.printf("Average: %.2f",average);
     }
     public static void main(String[] args) {
-        Exercise2.CALCULATE();
+        Exercise2_SumAverage.CALCULATE();
     }
 }

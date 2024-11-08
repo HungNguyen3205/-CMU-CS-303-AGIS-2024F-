@@ -1,6 +1,6 @@
-package Assignment4;
+package Assignment4.Loop;
 
-public class bai3 {
+public class Exercise3_PrimeNumbers {
 
     public static boolean isPrime(int n){
         if ( n <= 1 ){
@@ -28,6 +28,6 @@ public class bai3 {
     }
 
     public static void main(String[] args) {
-        bai3.Prime_numbers();
+        Exercise3_PrimeNumbers.Prime_numbers();
     }
 }

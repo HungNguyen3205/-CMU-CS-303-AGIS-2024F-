@@ -1,6 +1,6 @@
-package Assignment5;
+package Assignment5.Loop1;
 
-public class Exercise3 {
+public class Exercise3_MultiplicationTable {
     public static void theMultiplicationTable(){
         for ( int i = 0; i<=10; i++){
             for ( int j = 0; j<=10;j++){
@@ -10,6 +10,6 @@ public class Exercise3 {
         }
     }
     public static void main(String[] args) {
-        Exercise3.theMultiplicationTable();
+        Exercise3_MultiplicationTable.theMultiplicationTable();
     }
 }

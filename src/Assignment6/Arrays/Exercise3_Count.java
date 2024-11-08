@@ -1,9 +1,9 @@
-package Assignment6;
+package Assignment6.Arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercise3 {
+public class Exercise3_Count {
 
     public static void COunt() {
         System.out.println("Enter n: ");
@@ -26,6 +26,6 @@ public class Exercise3 {
     }
 
     public static void main(String[] args) {
-        Exercise3.COunt();
+        Exercise3_Count.COunt();
     }
 }

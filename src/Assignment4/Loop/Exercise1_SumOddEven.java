@@ -1,6 +1,6 @@
-package Assignment4;
+package Assignment4.Loop;
 
-public class bai1 {
+public class Exercise1_SumOddEven {
 
     public static void Sum_odd_even() {
         int sum_odd = 0;
@@ -36,8 +36,8 @@ public class bai1 {
     }
     
     public static void main(String[] args) {
-        bai1.Sum_odd_even();
-        bai1.Odd();
-        bai1.Even();
+        Exercise1_SumOddEven.Sum_odd_even();
+        Exercise1_SumOddEven.Odd();
+        Exercise1_SumOddEven.Even();
     }
 }

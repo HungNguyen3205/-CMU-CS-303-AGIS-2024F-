@@ -1,8 +1,8 @@
-package Assignment5;
+package Assignment5.Loop1;
 
 import java.util.Scanner;
 
-public class Exercise4 {
+public class Exercise4_Pyramid {
     public static void pyramid(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
@@ -15,6 +15,6 @@ public class Exercise4 {
         }
     }
     public static void main(String[] args) {
-        Exercise4.pyramid();
+        Exercise4_Pyramid.pyramid();
     }
 }
