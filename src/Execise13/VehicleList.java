@@ -167,6 +167,17 @@ public class VehicleList {
         }
     }
 
+    // Hàm hỗ trợ xóa phương tiện theo ID
+    public boolean deleteVehicleById(String id) {
+        for (int i = 0; i < vehiclelist.size(); i++) {
+            if (vehiclelist.get(i).getId().equalsIgnoreCase(id)) {
+                vehiclelist.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Tìm kiếm phương tiện
     public void findVehicle() {
         System.out.print("Enter vehicle ID: ");
@@ -177,6 +188,16 @@ public class VehicleList {
         } else {
             System.out.println("Vehicle not found.");
         }
+    }
+
+    // Hàm hỗ trợ tìm phương tiện theo ID
+    public Vehicle findVehicleByID(String id) {
+        for (Vehicle v : vehiclelist) {
+            if (v.getId().equalsIgnoreCase(id)) {
+                return v;
+            }
+        }
+        return null;
     }
 
     // Tìm xe hơi theo số ghế
@@ -195,56 +216,6 @@ public class VehicleList {
         }
     }
 
-    // Tìm xe tải đi xa nhất
-    public void findTruckWithLongestDistance() {
-        Truck truck = findTruckById();
-        if (truck != null) {
-            System.out.println("Truck with the longest distance:");
-            truck.displayDetails();
-        }
-    }
-
-    // Tìm xe hơi điện
-    public void findElectricCars() {
-        ArrayList<Car> electricCars = findElectricCar();
-        if (electricCars.isEmpty()) {
-            System.out.println("No electric cars found.");
-        } else {
-            System.out.println("Electric cars:");
-            for (Car car : electricCars) {
-                car.displayDetails();
-                System.out.println("--------------------");
-            }
-        }
-    }
-
-    // Hàm hỗ trợ thêm phương tiện vào danh sách
-    public void addVehicle(Vehicle h) {
-        vehiclelist.add(h);
-        System.out.println("Vehicle added successfully.");
-    }
-
-    // Hàm hỗ trợ xóa phương tiện theo ID
-    public boolean deleteVehicleById(String id) {
-        for (int i = 0; i < vehiclelist.size(); i++) {
-            if (vehiclelist.get(i).getId().equalsIgnoreCase(id)) {
-                vehiclelist.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // Hàm hỗ trợ tìm phương tiện theo ID
-    public Vehicle findVehicleByID(String id) {
-        for (Vehicle v : vehiclelist) {
-            if (v.getId().equalsIgnoreCase(id)) {
-                return v;
-            }
-        }
-        return null;
-    }
-
     // Hàm hỗ trợ tìm xe hơi theo số ghế
     public ArrayList<Car> findcarById(int numberOfSeats) {
         ArrayList<Car> cars = new ArrayList<>();
@@ -257,6 +228,15 @@ public class VehicleList {
             }
         }
         return cars;
+    }
+
+    // Tìm xe tải đi xa nhất
+    public void findTruckWithLongestDistance() {
+        Truck truck = findTruckById();
+        if (truck != null) {
+            System.out.println("Truck with the longest distance:");
+            truck.displayDetails();
+        }
     }
 
     // Hàm hỗ trợ tìm xe tải đi xa nhất
@@ -273,6 +253,20 @@ public class VehicleList {
             }
         }
         return longest;
+    }
+
+    // Tìm xe hơi điện
+    public void findElectricCars() {
+        ArrayList<Car> electricCars = findElectricCar();
+        if (electricCars.isEmpty()) {
+            System.out.println("No electric cars found.");
+        } else {
+            System.out.println("Electric cars:");
+            for (Car car : electricCars) {
+                car.displayDetails();
+                System.out.println("--------------------");
+            }
+        }
     }
 
     // Hàm hỗ trợ tìm xe hơi điện
