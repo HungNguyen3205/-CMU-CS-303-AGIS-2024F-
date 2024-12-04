@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VehicleList {
-    
+
     ArrayList<Vehicle> vehiclelist = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -70,102 +70,89 @@ public class VehicleList {
         System.out.print("Enter vehicle ID: ");
         String id = sc.nextLine();
         Vehicle vehicle = findVehicleByID(id);
-        if (vehicle == null) {
+        if (vehicle != null) {
+            Scanner sc = new Scanner(System.in);
+            while (true) {
+                System.out.println("Choose the attribute you want to update:");
+                System.out.println("1. Update brand");
+                System.out.println("2. Update model");
+                System.out.println("3. Update rental days");
+                System.out.println("4. Update rental price per day");
+                if (vehicle instanceof Car) {
+                    System.out.println("5. Update number of seats");
+                    System.out.println("6. Update fuel type");
+                } else if (vehicle instanceof Truck) {
+                    System.out.println("5. Update load capacity");
+                    System.out.println("6. Update distance traveled");
+                }
+                System.out.println("0. Exit");
+                System.out.print("Enter your choice: ");
+
+                int choice = sc.nextInt();
+                sc.nextLine(); // Consume newline
+
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter new brand: ");
+                        vehicle.setBrand(sc.nextLine());
+                        System.out.println("Brand updated successfully.");
+                        break;
+                    case 2:
+                        System.out.print("Enter new model: ");
+                        vehicle.setModel(sc.nextLine());
+                        System.out.println("Model updated successfully.");
+                        break;
+                    case 3:
+                        System.out.print("Enter new rental days: ");
+                        vehicle.setRentalDays(sc.nextInt());
+                        sc.nextLine(); // Consume newline
+                        System.out.println("Rental days updated successfully.");
+                        break;
+                    case 4:
+                        System.out.print("Enter new rental price per day: ");
+                        vehicle.setRentalPricePerDay(sc.nextDouble());
+                        sc.nextLine(); // Consume newline
+                        System.out.println("Rental price updated successfully.");
+                        break;
+                    case 5:
+                        if (vehicle instanceof Car) {
+                            Car car = (Car) vehicle;
+                            System.out.print("Enter new number of seats: ");
+                            car.setNumberOfSeats(sc.nextInt());
+                            sc.nextLine(); // Consume newline
+                            System.out.println("Number of seats updated successfully.");
+                        } else if (vehicle instanceof Truck) {
+                            Truck truck = (Truck) vehicle;
+                            System.out.print("Enter new load capacity: ");
+                            truck.setLoadCapacity(sc.nextDouble());
+                            sc.nextLine(); // Consume newline
+                            System.out.println("Load capacity updated successfully.");
+                        }
+                        break;
+                    case 6:
+                        if (vehicle instanceof Car) {
+                            Car car = (Car) vehicle;
+                            System.out.print("Enter new fuel type: ");
+                            car.setFuelType(sc.nextLine());
+                            System.out.println("Fuel type updated successfully.");
+                        } else if (vehicle instanceof Truck) {
+                            Truck truck = (Truck) vehicle;
+                            System.out.print("Enter new distance traveled: ");
+                            truck.setDistance(sc.nextDouble());
+                            sc.nextLine(); // Consume newline
+                            System.out.println("Distance traveled updated successfully.");
+                        }
+                        break;
+                    case 0:
+                        System.out.println("Exiting update process.");
+                        return; // Exit the method
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            }
+        } else {
             System.out.println("Vehicle with ID " + id + " not found.");
-            return;
         }
-        if (vehicle instanceof Car) {
-            Car car = (Car) vehicle;
-            System.out.println("Enter number you want to update: ");
-            System.out.println("1. Update brand.");
-            System.out.println("2. Update model.");
-            System.out.println("3. Update rental day.");
-            System.out.println("4. Update rental price day.");
-            System.out.println("5. Update number of seat.");
-            System.out.println("6. Update fuel type.");
-            System.out.println("0. Exit.");
-            System.out.println("Enter choice.");
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1: {
-                    System.out.print("Enter new brand: ");
-                    car.setBrand(sc.nextLine());
-                    
-                }
-                case 2: {
-                    System.out.print("Enter new model: ");
-                    car.setModel(sc.nextLine());
-                }
-                case 3: {
-                    System.out.println("Enter new rental day: ");
-                    car.setRentalDays(sc.nextInt());
-                }
-                case 4: {
-                    System.out.print("Enter new rental price per day: ");
-                    car.setRentalPricePerDay(sc.nextDouble());
-                }
-                case 5: {
-                    System.out.print("Enter new number of seats: ");
-                    car.setNumberOfSeats(sc.nextInt());
-                    sc.nextLine();
-                }
-                case 6: {
-                    System.out.print("Enter new fuel type: ");
-                    car.setFuelType(sc.nextLine());
-                }
-                case 0: {
-                    System.out.println("Exit complete.");
-                }
-                default:{
-                    System.out.println("Your choice is not correct.");
-                }
-            }
-            
-        } else if (vehicle instanceof Truck) {
-            Truck truck = (Truck) vehicle;
-            System.out.println("Enter number you want to update: ");
-            System.out.println("1. Update brand.");
-            System.out.println("2. Update model.");
-            System.out.println("3. Update rental day.");
-            System.out.println("4. Update rental price day.");
-            System.out.println("5. Update number of seat.");
-            System.out.println("6. Update fuel type.");
-            System.out.println("0. Exit.");
-            System.out.println("Enter choice.");
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1: {
-                    System.out.print("Enter new brand: ");
-                    truck.setBrand(sc.nextLine());
-                }
-                case 2: {
-                    System.out.print("Enter new model: ");
-                    truck.setModel(sc.nextLine());
-                }
-                case 3: {
-                    System.out.println("Enter new rental day: ");
-                    truck.setRentalDays(sc.nextInt());
-                }
-                case 4: {
-                    System.out.print("Enter new rental price per day: ");
-                    truck.setRentalPricePerDay(sc.nextDouble());
-                }
-                case 5: {
-                    System.out.print("Enter new load capacity: ");
-                    truck.setLoadCapacity(sc.nextDouble());
-                }
-                case 6: {
-                    System.out.print("Enter new distance traveled: ");
-                    truck.setDistance(sc.nextDouble());
-                    sc.nextLine(); // Consume newline
-                }
-                default:{
-                    System.out.println("Your choice is not correct.");
-                }
-            }
-            
-        }
-        System.out.println("Vehicle updated successfully.");
     }
 
     // Xóa phương tiện
